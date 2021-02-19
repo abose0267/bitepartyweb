@@ -21,8 +21,15 @@
     font-size: calc(10px + 2vmin);
     color: black;
     margin-left: -60px;
-    margin-right: -30px;
+    margin-right: -20px;
   }
+  .App-logo {
+    margin-top:  -120px;
+    height: 200vmin;
+    pointer-events: none;
+  }
+
+
 }
   
 
