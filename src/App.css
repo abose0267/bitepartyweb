@@ -26,12 +26,11 @@
     overflow-x: hidden;
   }
   .App-logo {
-    margin-top:  -120px;
+    padding: auto;
     height: 150vmin;
     display: flex;
     pointer-events: none;
     align-items: center;
-    justify-content: center;
     overflow-x: hidden;
 
   }
