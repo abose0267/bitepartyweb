@@ -22,7 +22,7 @@
     font-size: calc(10px + 2vmin);
     color: black;
     margin-left: -60px;
-    
+    overflow-y: hidden;
     overflow-x: hidden;
   }
   .App-logo {
@@ -45,7 +45,7 @@
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 767) and (orientation: landscape){
+@media only screen and (max-width: 767) and (orientation: landscape){
 html{
   transform: rotate(-90deg);
   transform-origin: left top;
