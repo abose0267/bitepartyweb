@@ -4,6 +4,8 @@ import back from './logoText2.PNG';
 
 
 function App() {
+  document.title = "Bite Party!"
+  
   return (
     <div className="App">
       <header className="App-header">
