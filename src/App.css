@@ -1,84 +1,10 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
-
-.App-logo {
-  margin-top:  -120px;
-  height: 110vmin;
-  pointer-events: none;
-}
-
-@media only screen and (max-width: 768px) {
-  .App-header {
-    background-image: url("../src/backgroundGradient.JPG");
-    background-size: cover;
-    background-color: #F76F6D;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: black;
-    margin-left: -60px;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  .App-logo {
-    padding: auto;
-    height: 150vmin;
-    display: flex;
-    pointer-events: none;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-  }
-  .App-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  
-
-
-}
-
-@media only screen and (max-width: 767) and (orientation: landscape){
-html{
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  width: 100vh;
-  overflow-x: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-}
-  
-
-.App-header {
-  background-image: url("../src/backgroundGradient.JPG");
-  background-size: cover;
-  background-color: #F76F6D;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  margin-left: -10px;
-  
-}
-
-.App-link {
-  color: black;
-}
-
-

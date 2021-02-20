@@ -1,27 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import back from './logoText2.PNG';
-
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import LandingPage from './components/pages/LandingPage.js'
 
 function App() {
-  document.title = "Bite Party!"
-  
-  return (
-    <div className="App">
-      <header className="App-header">
-      <a
-          className="App-link"
-          href="https://kas-tech.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        <img src={back} className="App-logo" alt="logo"  href="https://kas-tech.com"
-          target="_blank"
-          rel="noopener noreferrer" />
-        </a>
-      </header>
-    </div>
-  );
+  return(
+    <>
+      <Router>
+        <div>
+          <Route path='/' exact component={LandingPage} />
+        </div>
+      </Router>
+    </>
+  )
 }
 
 export default App;
