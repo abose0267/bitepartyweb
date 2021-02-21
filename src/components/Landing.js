@@ -6,6 +6,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
+import { borders } from '@material-ui/system';
 
 
 const Landing = () => {
@@ -26,15 +27,11 @@ const Landing = () => {
                     <h4>Adventurous.</h4>
                 </div>
                 <div className="rowcontainers">
-                    <div className="block1">
-                        <h1 numberOfLines={2}>Support small businesses</h1>
-                    </div>
-                    <div className="block1">
-                        <h1>heyooo234</h1>
-                    </div>
-                    <div className="block2">
-                        <h1>heyooo567</h1>
-                    </div>
+                    <Card className="cardcomp">
+                        <CardContent className="cardcontent">
+                            <h1>heyooo</h1>
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </>
