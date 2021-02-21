@@ -26,8 +26,15 @@ const Landing = () => {
                     <h4>Adventurous.</h4>
                 </div>
                 <div className="rowcontainers">
-                    <h1>heyooo</h1>
-                    <h1>heyooo again</h1>
+                    <div className="block1">
+                        <h1 numberOfLines={2}>Support small businesses</h1>
+                    </div>
+                    <div className="block1">
+                        <h1>heyooo234</h1>
+                    </div>
+                    <div className="block2">
+                        <h1>heyooo567</h1>
+                    </div>
                 </div>
             </div>
         </>
