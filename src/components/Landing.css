@@ -1,35 +1,41 @@
 .herocontainer {
   height: 100vh;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   object-fit: contain;
   overflow-x: hidden;
   border-top: 0.5px solid #343a40;
-  background-image: url("../assets/hero_image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  overflow-y: hidden;
 }
-.herocontainer > h4 {
-  font-weight: 400;
-  color: white;
+.herotext {
+  height: 100vh;
+  width: 50%;
+  flex-direction: column;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+}
+.herotext > h4 {
+  font-weight: 600;
+  color: black;
   font-size: 50px;
 }
-.herocontainer > h1 {
-  font-weight: 400;
-  color: white;
-  font-size: 100px;
+.herotext > h1 {
+  font-weight: 600;
+  color: black;
+  font-size: 50px;
 }
 
 .landingcontainer2 {
-  height: 60vh;
+  height: 100vh;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #fff;
   display: flex;
+  overflow-y: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -37,10 +43,31 @@
   overflow-x: hidden;
 }
 
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.box {
+  padding: 50px;
+  margin: 20px 0;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+.inner {
+  display: flex;
+  margin-top: 20%;
+  margin-left: 10%;
+}
 .landingcontainer3 {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(#fc4a1a, #f7b733);
+  background: linear-gradient(#fff, #f76f6d );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,7 +109,18 @@
   flex-direction: row;
   overflow-y: hidden;
 }
-
+.heroimage {
+  height: 100vh;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+.heroimage > .backgroundimg {
+  height: 60%;
+  width: 100%;
+  
+}
 .cardcomp {
   height: 40vh;
   width: 20%;
@@ -95,7 +133,93 @@
 .dinogif {
   background: repeat;
 }
+
 span.vermillion {
   color: #f76f6d;
   font-weight: 400;
+}
+@media only screen and (max-width: 812px) {
+  .herocontainer {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    overflow-x: hidden;
+    border-top: 0.5px solid #343a40;
+    overflow-y: hidden;
+  }
+  .herotext {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*align-items: center;*/
+  }
+  .herotext > h4 {
+    font-weight: 600;
+    color: black;
+    font-size: 30px;
+  }
+  .heroimage {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    border: 1px solid black;
+  }
+  .heroimage > .backgroundimg {
+    height: 60%;
+    width: 100%;
+    
+  }
+  .herotext > h1 {
+    font-weight: 600;
+    color: black;
+    font-size: 30px;
+  }
+  html,body
+  {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+  }
+  .landingcontainer2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    overflow-y: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    overflow-x: hidden;
+  }
+  .box {
+    padding: 20px;
+    margin: 20px 0;
+  }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
 }

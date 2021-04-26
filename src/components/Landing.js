@@ -1,38 +1,52 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import './Landing.css';
-import cute_dino from '../assets/cute_dino.gif';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import { borders } from '@material-ui/system';
-
+import backgroundimg from '../assets/undraw_town_r6pc.png'
+import {gsap} from "gsap";
+import texttoshow from './texttoshow.js'
 
 const Landing = () => {
+    function FadeInSection(props) {
+        const [isVisible, setVisible] = React.useState(true);
+        const domRef = React.useRef();
+        React.useEffect(() => {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+          });
+          observer.observe(domRef.current);
+          return () => observer.unobserve(domRef.current);
+        }, []);
+        return (
+          <div
+            className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+            ref={domRef}
+          >
+            {props.children}
+          </div>
+        );
+    }
     return(
         <>
             <div className="herocontainer">
-                <h4>Bringing people together.</h4>
-                <h1>One <span className="vermillion">bite</span> at a time.</h1>
+                <div className="herotext">
+                    <h4>Bringing people together,</h4>
+                    <h1>one bite at a time.</h1>
+                </div>
+                <div className="heroimage">
+                    <img src={backgroundimg} className="backgroundimg"/>
+                </div>
+               
             </div>
             <div className="landingcontainer2">
-                <img src={cute_dino} className="dinogif"/>
-                <h2>No video, but here's a cute dino.</h2>
+                {texttoshow.map(line => (
+                    <FadeInSection key={line} className="potato">
+                        <div className="box">
+                            <h2>{line}</h2>
+                        </div> 
+                    </FadeInSection>
+                ))}
             </div>
             <div className="landingcontainer3">
-                <div className="titles">
-                    <h2>New.</h2>
-                    <h3>Spontaneous.</h3>
-                    <h4>Adventurous.</h4>
-                </div>
-                <div className="rowcontainers">
-                    <Card className="cardcomp">
-                        <CardContent className="cardcontent">
-                            <h1>heyooo</h1>
-                        </CardContent>
-                    </Card>
-                </div>
+                
             </div>
         </>
     )

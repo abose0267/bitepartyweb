@@ -3,3 +3,14 @@
   align-items: center;
   width: 100%;
 }
+span.vermillion {
+  color: #f76f6d;
+  font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .brand {
+    display: flex;
+    align-items: center;
+    width: 120%;
+  }
+}
