@@ -1,6 +1,6 @@
 export default [
-    'Incredible way to connect with your friends',
-    'who who who who',
-    'who let the dogs out',
-    'who who who who'
+    'Invite your friends',
+    'Or go exploring by yourself',
+    'Swipe through tons of places near you',
+    'Choose filters and cuisines'
 ]
