@@ -1,31 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* contact */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.contact{
+  display: grid;
+  height: 50vh;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff 0%, #f3e4d6 74%);
+}
+.wrapper .button{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin: 0 50px;
+  overflow: hidden;
+  background: linear-gradient(90deg,#E1387F, #F18F64);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 300px;
+  background: white;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 100px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: lightgrey;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-left: 15px;
+  transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+}
+.wrapper .button:nth-child(1) > span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) > span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(3) > span{
+  color: grey;
+}
+.socialtext {
+  text-align: center;
+  font-size: 30px;
+  color: grey;
+}
+.socialtext2 {
+  text-align: center;
+  font-size: 10px;
+  color: grey;
+}
+
+.appstorebutton {
+  display: absolute;
+  overflow: hidden; 
+  width: 200px; 
+  height: 83px;
+  margin-top: 100px;
+  margin-left: 50%;
+}
+.appstorebutton > img {
+  border-radius: 13px; 
+  width: 200px; 
+  height: 83px;
+}
+
+.googleplaybutton {
+  background: url('../assets/googleplay.png') no-repeat center;
+  height: 300px;
+  width: 100%;
+  display: flex;
+} 
+
+
 /* Flip Cards */
 .flipbox {
-  width: 2000px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1 fr));
-  grid-gap: 15px;
-  margin: 0 auto;
-  background: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+
+  /* margin: 10% auto; */
 }
 .card {
   position: relative;
   width: 300px;
-  height: 350px;
-  background: #fff;
-  margin: 0 auto;
-  border-radius: 4px;
+  height: 610px;
+  margin: 3.5% auto;
+  border-radius: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  background: linear-gradient(#E1387F, #F18F64);
 }
 .card:before,
-.card::after {
+.card:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 4px;
-  background: #fff;
+  border-radius: 2px;
+  background: linear-gradient(#E1387F, #F18F64);
   transition: 0.5s;
   z-index: -1;
 }
@@ -46,9 +155,8 @@
   background: #222;
   transition: 0.5s;
   z-index: 1;
-}
-.card:hover > .imgBx {
-  bottom: 80px;
+  border-radius: 20px;
+  
 }
 .card > .imgBx > img {
   position: absolute;
@@ -57,6 +165,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 .card > details {
   position: absolute;
@@ -84,30 +193,52 @@
 
 /* Ok this is the container for scrolling and then the image underneath */
 .scrollcontainer {
-  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
   background: #f9f9f9;
   font-size: 24px;
-  padding: 25px;
+  padding: 0;
 }
 .parallax {
   background: url('../assets/hero_image.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height: 300px;
+  width: 100%;
+  display: flex;
+}
+.parallax2 {
+  background: url('../assets/cake.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+  width: 100%;
+  display: flex;
+}
+.parallax3 {
+  background: url('../assets/veggie.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+  width: 100%;
+  display: flex;
 }
 
 /* This is for the "bringing people together" slogan details */
 .herocontainer {
   position: relative;
-  text-align: center;
+  text-align: right;
   color: white;
 }
 .herotext {
   position: absolute;
-  top: 300px;
+  top: 40vh;
   right: 800px;
   text-align: right;
+  display: flex;
+  height: 100vh;
+  width: 50%;
+  flex-direction: column;
 }
 .herotext > h4 {
   font-weight: 600;
@@ -119,16 +250,21 @@
   color: #f76f6d;
   font-size: 50px;
 }
-.imagemove{
-  top: 300px;
-  float: left;
+
+/* this is for the phone graphic at the start */
+.imagemove {
+  /* width: 50%; */
+  margin-left: 40%;
+  margin-top: 20px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* Holds the fade in fade out features part */
 .landingcontainer2 {
   height: 325vh;
   width: 100%;
-  background: #ffd7af;
+  background: #e4b78a;
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
@@ -162,7 +298,7 @@
 /* These are the fade in titles */
 .titles {
   position: relative;
-  text-align: right;
+  text-align: center;
   color: white;
 }
 .titles > h2 {
@@ -187,12 +323,12 @@
   width: 100%;
   background: #f3e4d6;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   object-fit: contain;
   overflow-x: hidden;
 }
-
 .rowcontainers {
   display: flex;
   height: 70vh;
@@ -234,7 +370,7 @@ span.vermillion {
 }
 @media only screen and (max-width: 812px) {
   .herocontainer {
-    /* height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: #fff;
     display: flex;
@@ -244,23 +380,23 @@ span.vermillion {
     object-fit: contain;
     overflow-x: hidden;
     border-top: 0.5px solid #343a40;
-    overflow-y: hidden; */
-    position: relative;
+    overflow-y: hidden;
+    /* position: relative;
     text-align: center;
-    color: white;
+    color: white; */
   }
   .herotext {
-    /* height: 100vh;
+    height: 100vh;
     width: 100%;
     flex-direction: column;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center; */
-    /*align-items: center;*/
-    position: absolute;
+    justify-content: center; 
+    /*align-items: center;
+    /* position: absolute;
     top: 700px;
-    left: 30px;
+    left: 30px; */
   }
   .herotext > h4 {
     font-weight: 600;
@@ -285,17 +421,17 @@ span.vermillion {
     color: black;
     font-size: 30px;
   }
-  html,body
+  /* html,body
   {
     width: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
-  }
+  } */
   .landingcontainer2 {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(#F18F64, #f76f6d );
+    background: #ffd7af;;
     display: flex;
     overflow-y: hidden;
     flex-direction: column;

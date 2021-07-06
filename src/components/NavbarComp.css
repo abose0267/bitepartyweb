@@ -1,13 +1,15 @@
+
+
 .brand {
   display: flex;
-  align-items: center;
+  align-items: left;
   width: 100%;
 }
 span.vermillion {
   color: #f76f6d;
   font-weight: bold;
 }
-.a {
+.b {
   float: left;
   font-size: 20px;
   color: black;
@@ -15,7 +17,7 @@ span.vermillion {
   padding: 14px 16px;
   text-decoration: none;
 }
-.a:hover {
+.b:hover {
   background-color: #f1e8e8;
   
 }
@@ -25,4 +27,21 @@ span.vermillion {
     align-items: center;
     width: 120%;
   }
+}
+.outside {
+  position: absolute;
+  right: 0.5%;
+  top: 0.05%;
+  width: 150px;
+  padding: 5px;
+  margin: 20px;
+  background: linear-gradient(90deg, #E1387F 0%, #F18F64 74%);
+  border-radius: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.outside:hover{
+  color: #f1e8e8;
 }
