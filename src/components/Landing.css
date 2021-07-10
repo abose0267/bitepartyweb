@@ -360,78 +360,63 @@
   background-color: black;
   border-radius: 100px;
 }
-.dinogif {
-  background: repeat;
-}
 
 span.vermillion {
   color: #f76f6d;
   font-weight: 400;
 }
-@media only screen and (max-width: 812px) {
-  .herocontainer {
-    height: 100vh;
+@media all and (max-width: 812px) {
+
+/* TOP SECTION */
+  .landingcontainer3 {
+    height: 39vh;
     width: 100%;
-    background-color: #fff;
+    background: #f3e4d6;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    object-fit: contain;
+    object-fit: cover;
     overflow-x: hidden;
-    border-top: 0.5px solid #343a40;
-    overflow-y: hidden;
-    /* position: relative;
-    text-align: center;
-    color: white; */
   }
   .herotext {
+    position: absolute;
+    top: 20vh;
+    left: 0px;
+    text-align: center;
+    display: flex;
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    /*align-items: center;
-    /* position: absolute;
-    top: 700px;
-    left: 30px; */
   }
   .herotext > h4 {
     font-weight: 600;
-    color: black;
-    font-size: 30px;
-  }
-  .heroimage {
-    height: 100vh;
-    width: 100%;
-    /* flex-direction: column; */
-    justify-content: center;
-    display: flex;
-    border: 1px solid black;
-  }
-  .heroimage > .backgroundimg {
-    height: 70%;
-    width: 100%;
-    
+    color: #f76f6d;
+    font-size: 20px;
   }
   .herotext > h1 {
     font-weight: 600;
-    color: black;
-    font-size: 30px;
+    color: #f76f6d;
+    font-size: 20px;
   }
-  /* html,body
-  {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-  } */
+  .imagemove {
+    /* width: 50%; */
+    position: absolute;
+    margin-left: 0%;
+    top: 30vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .imagemove > img {
+    width: 300px;
+  }
+/* TOP SECTION END */
+
+/* FADE IN SECTION */
   .landingcontainer2 {
-    height: 100vh;
+    height: 275vh;
     width: 100%;
-    background: #ffd7af;;
+    background: #e4b78a;
     display: flex;
     overflow-y: hidden;
     flex-direction: column;
@@ -440,22 +425,111 @@ span.vermillion {
     object-fit: contain;
     overflow-x: hidden;
   }
-  .box {
-    padding: 10px;
-    margin: 20px;
+  .titles > h2 {
+    margin-top: 2%;
+    font-size: 40px;
+    color: #ffffff;
   }
+/* FADE IN SECTION END*/
+
+/* CARDS */
+.flipbox {
+  height: 330vh;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  background-color:#f3e4d6;
+}
+.card {
+  position: absolute;
+  top: 100px;
+  width: 300px;
+  height: 300;
+  margin: 3.5% auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  background: linear-gradient(#E1387F, #F18F64);
+}
+.card > .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  border-radius: 20px;
+  
+}
+.card > .imgBx > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* CARDS END */
+
+/* CONTACTS END */
+.wrapper .button{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 0 20px;
+  overflow: hidden;
+  background: linear-gradient(90deg,#E1387F, #F18F64);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 100px;
+  background: white;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 100px;
+  transition: all 0.3s ease-out;
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5){
-
-  html,
-  body{
-    width:100%;
-    overflow-x:hidden;
-  }
-
+.scrollcontainer {
+  width: 100%;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 0;
+}
+.parallax {
+  background: url('../assets/hero_image.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 425px;
+  width: 100%;
+  display: flex;
+}
+.parallax2 {
+  background: url('../assets/cake.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 425px;
+  width: 100%;
+  display: flex;
+}
+.parallax3 {
+  background: url('../assets/veggie.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 425px;
+  width: 100%;
+  display: flex;
+}
 }

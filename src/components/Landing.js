@@ -44,9 +44,9 @@ const Landing = () => {
             <a href="#meetus">
                 <div className="outside">Meet us!</div>
             </a>
-            <a href="#homepage">
+            {/* <a href="#homepage">
                 <div className="b">Home</div>
-            </a>
+            </a> */}
             <a href="#featurespage">
                 <div className="b">Features</div>
             </a>
@@ -64,11 +64,11 @@ const Landing = () => {
                     <h1>one bite at a time.</h1>
                 </div>
             </div>
-                <a href="https://apps.apple.com/us/app/biteparty/id1551432967?itsct=apps_box_badge&amp;itscg=30200">
+                {/* <a href="https://apps.apple.com/us/app/biteparty/id1551432967?itsct=apps_box_badge&amp;itscg=30200">
                     <div className="appstorebutton">
                         <img src={appstore}></img>
                     </div>
-                </a>
+                </a> */}
                 <div className="imagemove">
                     <img src={phones}></img>
                 </div>
