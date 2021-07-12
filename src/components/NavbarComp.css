@@ -1,11 +1,41 @@
+
+
 .brand {
   display: flex;
-  align-items: center;
+  align-items: left;
   width: 100%;
 }
 span.vermillion {
   color: #f76f6d;
   font-weight: bold;
+}
+.b {
+  float: left;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.b:hover {
+  background-color: #f1e8e8;
+}
+.outside {
+  position: absolute;
+  right: 0.5%;
+  top: 0.05%;
+  width: 150px;
+  padding: 5px;
+  margin: 20px;
+  background: linear-gradient(90deg, #E1387F 0%, #F18F64 74%);
+  border-radius: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.outside:hover{
+  color: #f1e8e8;
 }
 @media only screen and (max-width: 768px) {
   .brand {
@@ -13,4 +43,31 @@ span.vermillion {
     align-items: center;
     width: 120%;
   }
+}
+.outside {
+  position: absolute;
+  right: 0.02%;
+  top: 3px;
+  width: 80px;
+  padding: 5px;
+  margin: 20px;
+  background: linear-gradient(90deg, #E1387F 0%, #F18F64 74%);
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+.outside:hover{
+  color: #f1e8e8;
+}
+.b {
+  float: left;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+}
+.b:hover {
+  background-color: #f1e8e8;
 }
