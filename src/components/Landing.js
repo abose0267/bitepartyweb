@@ -62,13 +62,19 @@ const Landing = () => {
                 <div className="herotext">
                     <h4>Bringing people together,</h4>
                     <h1>one bite at a time.</h1>
+                    {/* <a href="https://apps.apple.com/us/app/biteparty/id1551432967?itsct=apps_box_badge&amp;itscg=30200">
+                        <div className="appstorebutton">
+                            <img src={appstore}></img>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/us/app/biteparty/id1551432967?itsct=apps_box_badge&amp;itscg=30200">
+                        <div className="googleplaybutton">
+                            <img src={appstore}></img>
+                        </div>
+                    </a> */}
                 </div>
+                
             </div>
-                {/* <a href="https://apps.apple.com/us/app/biteparty/id1551432967?itsct=apps_box_badge&amp;itscg=30200">
-                    <div className="appstorebutton">
-                        <img src={appstore}></img>
-                    </div>
-                </a> */}
                 <div className="imagemove">
                     <img src={phones}></img>
                 </div>
@@ -132,15 +138,18 @@ const Landing = () => {
                 <div className="socialtext">Learn More About Us!</div>
                     <div className="wrapper">
                         <div className="button">
-                            <div class="icon"><i class="fab fa-facebook"></i></div>
+                            <div class="icon"></div>
+                            <span2>Facebook</span2>
                             <span>Bite Party</span>
                         </div>
                         <div className="button">
-                            <div className="icon"><i class="fab fa-instagram"></i></div>
-                            <span>biteparty</span>
+                            <div className="icon"></div>
+                            <span2>Instagram</span2>
+                            <span>@biteparty</span>
                         </div>
                         <div className="button">
-                            <div className="icon"><i class="fab fa-email"></i></div>
+                            <div className="icon"></div>
+                            <span2>Email</span2>
                             <span>Email</span>
                         </div>
                     </div>
