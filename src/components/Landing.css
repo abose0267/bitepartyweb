@@ -17,7 +17,7 @@
   display: inline-block;
   height: 100px;
   width: 100px;
-  margin: 0 50px;
+  margin: 0 80px;
   overflow: hidden;
   background: linear-gradient(90deg,#E1387F, #F18F64);
   border-radius: 50px;
@@ -25,11 +25,19 @@
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease-out;
 }
-/* hi */
-.wrapper .button:hover{
-  width: 300px;
+.wrapper:nth-child(1):hover .button{
   background: white;
 }
+.wrapper:nth-child(2):hover .button{
+  background: #E1306C;
+}
+.wrapper:nth-child(3):hover .button{
+  background: lightgrey;
+}
+/* .wrapper .button:hover{
+  width: 300px;
+  background: white;
+} */
 .wrapper .button .icon{
   display: inline-block;
   height: 100px;
@@ -39,6 +47,24 @@
   box-sizing: border-box;
   line-height: 100px;
   transition: all 0.3s ease-out;
+}
+
+.wrapper .button > span{
+  position: absolute;
+  margin-left: 125px;
+  top: 687vh;
+  transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+}
+.wrapper .button > span2{
+  position: absolute;
+  margin-left: 125px;
+  top: 684vh;
+  transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  color: rgb(107, 107, 107);
 }
 .wrapper .button:nth-child(1):hover .icon{
   background: #4267B2;
@@ -56,25 +82,21 @@
 }
 .wrapper .button:hover .icon i{
   color: #fff;
-}
-.wrapper .button span{
-  font-size: 25px;
-  font-weight: 300;
-  line-height: 30px;
-  margin-left: 15px;
-  transition: all 0.3s ease-out;
-  display: flex;
-  align-items: center;
+
 }
 .wrapper .button:nth-child(1) > span{
+  font-size: 18px;
   color: #4267B2;
 }
 .wrapper .button:nth-child(2) > span{
+  font-size: 18px;
   color: #E1306C;
 }
 .wrapper .button:nth-child(3) > span{
+  font-size: 18px;
   color: grey;
 }
+
 .socialtext {
   text-align: center;
   font-size: 30px;
@@ -88,25 +110,28 @@
 
 .appstorebutton {
   display: absolute;
-  overflow: hidden; 
-  width: 200px; 
+  overflow: hidden;
+  width: 200px;
   height: 83px;
   margin-top: 100px;
   margin-left: 50%;
+  border: 5px solid black;
 }
 .appstorebutton > img {
   border-radius: 13px; 
   width: 200px; 
   height: 83px;
+  border: 5px solid black;
 }
-
 .googleplaybutton {
-  background: url('../assets/googleplay.png') no-repeat center;
-  height: 300px;
-  width: 100%;
-  display: flex;
-} 
-
+  display: absolute;
+  overflow: hidden; 
+  width: 200px; 
+  height: 83px;
+  margin-top: 100px;
+  margin-left: 50%;
+  border: 5px solid black;
+}
 
 /* Flip Cards */
 .flipbox {
@@ -257,6 +282,13 @@
   /* width: 50%; */
   margin-left: 40%;
   margin-top: 20px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: all 0.3s ease-out;
+}
+.imagemove:hover {
+  margin-left: 40%;
+  margin-top: 5px;
   overflow-y: hidden;
   overflow-x: hidden;
 }
